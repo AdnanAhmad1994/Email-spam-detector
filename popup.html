@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Email Spam Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Email Spam Detector</h1>
+    <button id="scan-btn">Check Now</button>
+    <div class="counters">
+      <div>Emails scanned: <span id="scanned-count">0</span></div>
+      <div>Flagged as spam: <span id="flagged-count">0</span></div>
+    </div>
+    <div class="add-keyword">
+      <input type="text" id="add-input" placeholder="Enter a spam keyword...">
+      <button id="add-btn">Add</button>
+    </div>
+    <h2>Your Spam Keywords:</h2>
+    <ul id="keywords-list"></ul>
+    <div class="import-section">
+      <h2>Import Keywords</h2>
+      <input type="file" id="import-file" accept=".csv, .txt">
+      <button id="import-btn">Import Keywords</button>
+    </div>
+    <div class="actions">
+      <button id="export-btn">Export</button>
+      <button id="clear-btn">Clear All</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
