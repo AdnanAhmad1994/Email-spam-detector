@@ -4,12 +4,12 @@
   "version": "1.1",
   "description": "Scan Gmail inbox for spam keywords and highlight potential spam emails. Supports large keyword imports via local storage.",
   "permissions": [
-    "storage",
-    "activeTab",
-    "scripting"
+    "storage"
   ],
   "host_permissions": [
-    "https://mail.google.com/*"
+    "https://mail.google.com/*",
+    "about:blank",
+    "*://mail.google.com/mail/u/*/?ui=2&view=bsp*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -27,14 +27,16 @@
   "content_scripts": [
     {
       "matches": [
-        "https://mail.google.com/*"
+        "https://mail.google.com/*",
+        "*://mail.google.com/mail/u/*/?ui=2&view=bsp*"
       ],
       "js": [
         "content.js"
       ],
       "css": [
         "content.css"
-      ]
+      ],
+      "all_frames": true
     }
   ]
 }

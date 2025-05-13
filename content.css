@@ -1,1 +1,21 @@
 .highlighted-spam { border: 2px solid red !important; background-color: rgba(255, 0, 0, 0.1) !important; }
+
+/* Style for opened email content that contains spam keywords (border on whole body - can be removed if only keyword highlighting is desired) */
+.opened-email-contains-spam {
+  border-left: 5px solid orange !important;
+  background-color: rgba(255, 165, 0, 0.05) !important;
+  padding-left: 10px !important;
+}
+
+/* Highlighted keyword style - NEW ROBUST VERSION */
+.highlighted-keyword {
+    background-color: rgba(255, 255, 0, 0.7) !important; /* Bright, slightly transparent yellow */
+    color: #333333 !important; /* Dark text for high contrast */
+    font-weight: bold !important;
+    padding: 1px 2px !important; /* Small padding for visual separation */
+    border-radius: 3px !important; /* Slightly rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important; /* Subtle shadow */
+    display: inline !important; /* Ensures text flow is not broken */
+    line-height: inherit !important; /* Prevents line height issues */
+    /* For debugging, consider: outline: 2px solid red !important; */
+}
